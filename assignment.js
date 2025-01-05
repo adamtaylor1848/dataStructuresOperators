@@ -222,10 +222,52 @@ const books = [
     highlighted: true,
   },
 ];
-const [firstBook, , thirdBook] = books;
 
-const { title, author, ISBN } = books[0];
-console.log(title, author, ISBN);
+function printBookInfo({
+  title = "Unknown",
+  author = "Unknown",
+  year = "year unknown",
+}) {
+  console.log(`${title} by ${author}, ${year}`);
+}
+
+printBookInfo({
+  title: "Algorithms",
+  author: "Robert Sedgewick",
+  year: "2011",
+});
+
+printBookInfo({ title: "Algorithms", author: "Robert Sedgewick" });
+// const {
+//   thirdParty: {
+//     goodreads: { rating: bookRating },
+//   },
+// } = books[0];
+
+// const { language, programmingLanguage = "unknown" } = books[6];
+
+// // console.log(language, programmingLanguage);
+
+// const { title: bookTitle, author: bookAuthor } = books[0];
+// // console.log(bookTitle, bookAuthor);
+
+// const {
+//   thirdParty: {
+//     goodreads: { rating: bookRating },
+//   },
+// } = books[0];
+// const {
+//   thirdParty: {
+//     goodreads: { rating: bookRating },
+//   },
+// } = books[0];
+// console.log(bookRating);
+
+// console.log(bookRating);
+// const [firstBook, , thirdBook] = books;
+
+// const { title, author, ISBN } = books[0];
+// console.log(title, author, ISBN);
 
 // const ratings = [
 //   ["rating", 4.19],
